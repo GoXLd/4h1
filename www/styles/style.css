@@ -1,0 +1,371 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,cyrillic);
+	html {   cursor: url(http://goxld.ru/cur/normal.cur), default;}
+	a:hover {	cursor: url(http://goxld.ru/cur/link.cur), pointer;}
+	body	{background: #f5f5dc;}
+			header {
+		color: #2e2d35;
+		font-size: 48pt;
+		font-family: 'Open Sans', cursive;
+		font-weight: 800;
+		text-shadow: 2px 2px 2px #666;
+		text-align: center;
+		opacity: 0.4;
+			}
+		header .ya {
+			color: #c0392b;
+			text-shadow: 2px 2px 2px #cd5c5c;
+			}
+			header:hover{opacity: 0.8;}
+			.ya:hover{cursor: url(http://goxld.ru/cur/precision.cur), pointer;}
+	
+	button {
+		border: none;
+		padding: 0.3em 0.9em;
+		background: #c0392b;
+		color: #fff;
+		font-family: 'Open Sans', cursive;
+		font-size: 1em;
+		letter-spacing: 1px;
+		margin-left: 300px;
+		margin-bottom: 20px;
+		text-transform: none;
+		display: inline-block;
+		border-radius: 2px;
+		opacity: 0.9;
+	}
+			button .beta {
+				background: #ffcc00;
+				margin-left: 10px;
+				margin-bottom: 20px;
+				}
+			button:hover {
+				background: #A5281B;
+				cursor: url(http://goxld.ru/cur/link.cur), pointer;
+				}
+	h1 {
+		padding: 0.3em 0.3em;
+		background: #ffcc00;
+		color: #000;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 15pt;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+		display: inline-block;
+		margin: 3px 2px;
+		border-radius: 10px;
+		box-shadow: 2px 2px 2px #aaa;
+		opacity: 0.7;
+		}
+
+		.window{
+	background: #FFFFFF;
+	border-radius: 6px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.251);
+	margin: 0px auto;
+	max-width: 940px;
+	min-width: 660px;
+	min-height: 500px;
+	padding: 20px 0px;
+	text-align: center;
+	top: 10px;
+	background: url(http://goxld.ru/backgrounds/damask_1.jpg) repeat;
+		}
+			.game .mesto{
+				height: 30px;
+				position: relative;
+					}
+				.game .mesto.g1{
+						z-index: 100;
+						left: 250px;
+						top: 25px;
+							}
+					.game .mesto.g2{
+						right: 350px;
+						z-index: 100;
+						top: -50px;
+									}
+		.deck{
+			z-index: 150;
+			position: relative;
+			display: inline-block;
+			margin: 0 0 0 179px;
+			height: 150px;
+			top: 100px;
+		}
+			.deck .card{
+				width: 175px;
+				height: 254px;
+				border: 1px solid #C0C0C0;
+				background: #FFF;
+				border-radius: 10px;
+				font-size: 20pt;
+				position: relative;
+				display: inline-block;
+				margin-left: -174px;
+				margin-top: 2px;
+					}
+        /* Close Card */
+			.deck .card.close{
+				background: url(http://goxld.ru/card/card-back.png);
+				box-shadow: inset 0 0 0px 2px #FFF;
+					}
+            .deck .card.close *,
+            .deck .card.close:after,
+            .deck .card.close:before{
+                display: none;
+                }
+            .deck .card.close:last-child{
+				box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.251);
+                }
+    /* Верхняя карта */
+	.g1 .deck .card {
+		margin-right: -6px;
+        cursor: url(http://goxld.ru/cur/unavailable.cur), default;
+        }
+    .g2 .deck .card:last-child{
+        cursor: url(http://goxld.ru/cur/link.cur), pointer;
+		-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+		-moz-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+		box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+		-webkit-transition: all 0.5s ease-out;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+        }
+        .g2 .deck .card:last-child:hover{
+		-webkit-transform: rotate(7deg);
+		-moz-transform: rotate(7deg);
+		-o-transform: rotate(9deg);
+            }
+		/*Анимация движения карты на "столе" Animate.CCS*/
+	.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:0.3s;-moz-animation-duration:0.3s;-ms-animation-duration:0.3s;-o-animation-duration:0.3s;animation-duration:0.3s;}.animated.hinge{-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}@-webkit-keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    } 40% {
+        -webkit-transform: perspective(400px) rotateX(-10deg);
+    }
+    
+    70% {
+        -webkit-transform: perspective(400px) rotateX(10deg);
+    }
+    
+    100% {
+        -webkit-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@-moz-keyframes flipInX {
+    0% {
+        -moz-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        -moz-transform: perspective(400px) rotateX(-10deg);
+    }
+    
+    70% {
+        -moz-transform: perspective(400px) rotateX(10deg);
+    }
+    
+    100% {
+        -moz-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@-o-keyframes flipInX {
+    0% {
+        -o-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        -o-transform: perspective(400px) rotateX(-10deg);
+    }
+    
+    70% {
+        -o-transform: perspective(400px) rotateX(10deg);
+    }
+    
+    100% {
+        -o-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@keyframes flipInX {
+    0% {
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        transform: perspective(400px) rotateX(-10deg);
+    }
+    
+    70% {
+        transform: perspective(400px) rotateX(10deg);
+    }
+    
+    100% {
+        transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+.flipInX {
+	-webkit-backface-visibility: visible !important;
+	-webkit-animation-name: flipInX;
+	-moz-backface-visibility: visible !important;
+	-moz-animation-name: flipInX;
+	-o-backface-visibility: visible !important;
+	-o-animation-name: flipInX;
+	backface-visibility: visible !important;
+	animation-name: flipInX;
+}
+
+/* General styles for the modal */
+
+/* 
+Styles for the html/body for special modal where we want 3d effects
+Note that we need a container wrapping all content on the page for the 
+perspective effects (not including the modals and the overlay).
+*/
+.md-perspective,
+.md-perspective body {
+	height: 100%;
+	overflow: hidden;
+}
+
+.md-perspective body  {
+	background: #faf0e6;
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+	perspective: 600px;
+}
+.md-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 630px;
+	min-width: 320px;
+	height: auto;
+	z-index: 2000;
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.md-show {
+	visibility: visible;
+}
+
+.md-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(192,167,167,0.8);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.md-show ~ .md-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Content styles */
+.md-content {
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	background: #C75353;
+	position: relative;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+
+.md-content h3 {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0.4em;
+	text-align: center;
+	font-size: 2.4em;
+	font-weight: 300;
+	opacity: 0.8;
+	background: rgba(0,0,0,0.1);
+	border-radius: 3px 3px 0 0;
+}
+
+.md-content > div {
+	font-family: 'Open Sans', sans-serif;
+	padding: 15px 40px 30px;
+	margin: 0;
+	font-weight: 300;
+	font-size: 1.15em;
+}
+
+.md-content > div p {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 10px 0;
+}
+
+.md-content > div ul {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0 0 30px 20px;
+}
+
+.md-content > div ul li {
+	padding: 5px 0;
+}
+
+.md-content button {
+	display: block;
+	margin: 0 auto;
+	font-size: 0.8em;
+}
+.md-content a {
+	display: block;
+	margin: 0 auto;
+	font-size: 1.15em;
+	color: #fff;
+}
+
+/* Effect 11: Super scaled */
+.md-effect-11 .md-content {
+	-webkit-transform: scale(2);
+	-moz-transform: scale(2);
+	-ms-transform: scale(2);
+	transform: scale(2);
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.md-show.md-effect-11 .md-content {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+
+#footer {
+position: relative;
+text-align: center;
+width: 100%;
+top: 20px;
+		}
