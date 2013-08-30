@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>GoXLd - the Drunkard game</title>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+</head>
+<body>
+	<header>Карточна<span class = "ya">Я</span> игра "the Drunkard"</div>
+	<div class="deck_1"></header>
+	<!-- Скрытые "красные окна" -->
+	<div class="md-modal md-effect-11" id="modal-11">
+			<div class="md-content">
+				<h3>Правила игры в "Пьяницу"</h3>
+				<div>
+					<p>Происхождение игры в <strong>«Пьяницу»</strong> неизвестно. Есть мнение, что свое название она приобрела из-за простых правил и еще потому, что победа в игре зависит исключительно от везения.
+					Играть в «Пьяницу» очень просто. На старте колода из 52 карт тасуется и делится между всеми игроками поровну. Далее каждый игрок кладет свою стопку карт перед собой «рубашкой» вверх.
+					</p>
+					<ul>
+						<li><strong>Игроки</strong> одновременно переворачивают верхнюю карту. Тот, у кого карта оказывается больше по достоинству, забирает все открытые карты себе и кладет их под свою стопку.</li>
+						<li><strong>Самой</strong> большой картой в «Пьянице» считается туз, самой маленькой — двойка.</li>
+						<li><strong>Если </strong>две карты оказываются одного достоинства, то начинается «война». Игроки кладут «рубашкой» вверх следующую карту, а следом за ней — карту лицом вверх. Игрок с большей картой забирает все карты на кону. Выигравший «поединок» забирает все карты на кону.</li>
+						<li><strong>Игра </strong>продолжается, пока у одного игрока не окажутся все карты — он и считается победителем.</li>
+					</ul>
+					<button class="md-close">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	<div class="md-modal md-effect-11" id="modal-12">
+			<div class="md-content">
+				<h3>Бывает..</h3>
+					<div>
+					<p>Всего лишь <strong>проигрыш</strong> можно попробовать удачу еще раз. Говорят: <i>"Бог, любит троицу"</i>, но не любит он Азарт, карты и все плохие и порочные вещи, но Вы всегда можешь найти что-нибудь хорошее и интересное</p>
+					<ul>
+						<li><strong><u><a href="http://blogs.yandex.ru/" target="_blank">Вы можете узнать</a></u></strong> последние новости из мира людей, только наиболее обсуждаемые темы.</li>
+						<li><strong>А может лучше <a href="http://music.yandex.ru/" target="_blank">послушать музыку?</a></strong> куда приятней читать под ритмы любимого музыкального направления.</li>
+						<li><strong>Не пора ли обновить технику дома?</strong> Лучшие цены и магазины на <u><a href="" target="_blank">Я.Маркете</a></u></li>
+					</ul>
+					<p>Страница автоматически обновится через 20 секунд после запуска</p>
+					<button class="md-close" id="refresh">Спасибо за игру</button>
+					</div>
+			</div><a href="" target="_blank"></a>
+	</div>
+	<div class="md-modal md-effect-11" id="modal-13">
+			<div class="md-content">
+				<h3>Наши поздравления!</h3>
+					<div>
+					<p>Вы прекрасно справились <strong>фортуна</strong> сегодня на Вашей стороне, впрочем разве молго быть иначе?) Кстати, не хотите отвлечься игр - мир прекрасен </p>
+					<ul>
+						<li><strong><u><a href="http://blogs.yandex.ru/" target="_blank">Вы можете узнать</a></u></strong> последние новости из мира людей, только наиболее обсуждаемые темы.</li>
+						<li><strong>А может лучше <a href="http://music.yandex.ru/" target="_blank">послушать музыку?</a></strong> куда приятней читать под ритмы любимого музыкального направления.</li>
+						<li><strong>Не пора ли обновить технику дома?</strong> Лучшие цены и магазины на <u><a href="" target="_blank">Я.Маркете</a></u></li>
+					</ul>
+					<p>Страница автоматически обновится через 20 секунд после запуска</p>
+					<button class="md-close" id="refresh">Спасибо за игру</button>
+					</div>
+			</div>
+	</div>
+		<!-- Кнопки вызова окна "Победа", "Поражение" и "Правила игры" используют библиотеку https://github.com/codrops/ModalWindowEffects (первые две кнопки only url)-->
+		<button class="md-trigger" data-modal="modal-12" id="modal-12" style="display:none;">Поражение</button>
+		<button class="md-trigger" data-modal="modal-13" id="modal-13" style="display:none;">Победа!ДА!</button>
+		<button class="md-trigger" data-modal="modal-11">ПРАВИЛА ИГРЫ</button>
+		<button class="beta"> Beta версия 1.0</button>
+		<!-- Продолжение темы "Красных окон" -->
+		<div class="md-overlay"></div>
+		<script src="js/classie.js"></script>
+		<script src="js/modalEffects.js"></script>
+		
+    <div class="window game" style="display:none;">
+        <!-- Первый игрок (пользователь)-->
+		<div class="mesto g1">
+			<ul class="g1_s"><h1>Карт: 26</h1></ul>
+            <ul class="deck"></ul>
+        </div>
+        <!-- Ячейки для сравнения значений value card (карточный стол) -->
+        <div class="mesto play">
+			<ul class="deck p1"></ul>
+            <ul class="deck p2"></ul>
+        </div>
+        <!-- Второй игрок - компьютер -->
+        <div class="mesto g2">
+			<ul class="g2_s"><h1>Карт: 26</h1></ul>
+            <ul class="deck"></ul>
+		</div>
+		</div>
+		<!-- Футер Лого -->
+		<div id="footer">
+		<a href="http://goxld.ru/" target="_blank"><img src="http://4h1.ru/goxld.png" width="95" onclick="locat" border="0" height="30" alt="GoXLd team"></a>
+		</div>
+</body>
+</html>
