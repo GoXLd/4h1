@@ -106,7 +106,7 @@
 					}
         /* Close Card */
 			.deck .card.close{
-				background: url(http://goxld.ru/card/card-back.png);
+				background: url(../card/card-back.png);
 				box-shadow: inset 0 0 0px 2px #FFF;
 					}
             .deck .card.close *,

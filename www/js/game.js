@@ -9,7 +9,7 @@
         var i, m;
         for (i = 2; i<15; i++){
 			for (m=0; m<4; m++){
-                deck.append('<li class="card" data-value="'+i+'"><img src="../card/'+m+''+i+'.jpg"</img></li>');
+                deck.append('<li class="card" data-value="'+i+'"><img src="./card/'+m+''+i+'.png"</img></li>');
             }
         }
     };
